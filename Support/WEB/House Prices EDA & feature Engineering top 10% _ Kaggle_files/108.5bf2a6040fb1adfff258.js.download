@@ -1,0 +1,63 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[108],{1102:function(e,n,a){},1715:function(e,n,a){"use strict";var t=a(1),r=a.n(t),c=a(1492),o=a(0),s=a(2);const b={light:{background:s.l,label:s.c},dark:{background:s.f,label:s.l}};a.d(n,"a",(function(){return m})),a(210),a(1102);const i=r()(c.a)`
+  &&.mdc-snackbar {
+    position: absolute;
+    left: 36px;
+    bottom: 76px;
+  }
+
+  .mdc-snackbar__surface {
+    background-color: ${e=>b[e.theme.name].background};
+  }
+
+  .mdc-snackbar__label {
+    color: ${e=>b[e.theme.name].label};
+  }
+
+  .mdc-snackbar__action:not(:disabled) {
+    color: var(--mdc-theme-primary);
+  }
+
+  .mdc-snackbar__action::before,
+  .mdc-snackbar__action::after {
+    background-color: var(--mdc-theme-primary);
+  }
+
+  .mdc-button {
+    min-width: ${e=>e.theme.material.spacing(10)};
+    .mdc-button__icon {
+      margin-right: 0;
+    }
+  }
+`,m=e=>{const{messages:n}=e;return o.createElement(i,{messages:n,leading:!0})}},2269:function(e,n,a){"use strict";a.r(n),a.d(n,"BookmarksSnackbar",(function(){return l}));var t=a(2),r=a(1715),c=a(1),o=a.n(c),s=a(0),b=a(926);const i={light:{background:t.l,buttonHover:t.j,buttonText:t.f,label:t.c},dark:{background:t.b,buttonHover:t.c,buttonText:t.l,label:t.j}},m=o.a.div`
+  && .mdc-snackbar {
+    font-family: Inter, sans-serif;
+    z-index: ${e=>e.theme.zindex[1e3]};
+  }
+  && .mdc-snackbar__surface {
+    background-color: ${e=>i[e.theme.name].background};
+    border-radius: 12px;
+  }
+  && .mdc-snackbar__label {
+    color: ${e=>i[e.theme.name].label};
+    font-size: 14px;
+    line-height: 20px;
+  }
+  && .mdc-snackbar__actions {
+    margin-right: 16px;
+  }
+  && .mdc-snackbar__action {
+    &:hover {
+      background-color: ${e=>i[e.theme.name].buttonHover};
+    }
+  }
+  && .mdc-button__label {
+    border-radius: 12px;
+    color: ${e=>i[e.theme.name].buttonText};
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 16px;
+    text-transform: none;
+  }
+`,l=e=>{const{messages:n}=b.a;return s.createElement(m,null,s.createElement(r.a,{messages:n}))}},926:function(e,n,a){"use strict";a.d(n,"a",(function(){return r}));var t=a(1492);const r=Object(t.b)()}}]);

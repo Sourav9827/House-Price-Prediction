@@ -1,0 +1,187 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[105],{1023:function(e,t,n){"use strict";n.d(t,"a",(function(){return a})),n.d(t,"b",(function(){return i})),n.d(t,"c",(function(){return r})),n.d(t,"d",(function(){return o})),n.d(t,"e",(function(){return s}));const a=()=>{var e,t,n,a,i,r,o,s,l,c;const u=(()=>{const e=window;return e&&e.Kaggle&&e.Kaggle.Current?e.Kaggle.Current:{}})();return{id:null!==(e=u.userId)&&void 0!==e?e:null,isAdmin:null!==(t=u.isAdmin)&&void 0!==t&&t,isAnonymous:null===(n=u.isAnonymous)||void 0===n||n,userName:null!==(a=u.userName)&&void 0!==a?a:null,displayName:null!==(i=u.userDisplayNameEscaped)&&void 0!==i?i:null,email:null!==(r=u.userEmail)&&void 0!==r?r:null,isPhoneVerified:null!==(o=u.userIsPhoneVerified)&&void 0!==o&&o,profileUrl:null!==(s=u.userProfileUrl)&&void 0!==s?s:null,tier:(null!==(l=u.tier)&&void 0!==l?l:"recalc").toLowerCase(),thumbnailUrl:null!==(c=u.userThumbnailUrl)&&void 0!==c?c:null}},i=()=>a().id,r=()=>a().isAdmin,o=()=>a().isAnonymous,s=()=>a().userName},1107:function(e,t,n){"use strict";n.d(t,"a",(function(){return r}));var a=n(3),i=n(0);const r=i.memo(e=>{const{src:t}=e,n=Object(a.__rest)(e,["src"]),r=t.lastIndexOf("."),o=t.substr(0,r),s=t.substr(r+1),l=`${o}.${s}, ${o}@2x.${s} 2x`,c=Object.assign(Object.assign({},n),{src:t,srcSet:l});return i.createElement("img",Object.assign({},c))})},1279:function(e,t,n){"use strict";n.d(t,"b",(function(){return a})),n.d(t,"a",(function(){return r}));var a,i=n(60);!function(e){e[e.EDIT_PROFILE=0]="EDIT_PROFILE"}(a||(a={}));const r=new i.a},1364:function(e,t,n){"use strict";var a=n(1),i=n.n(a),r=n(0),o=n(86),s=n(2);const l={light:{disabled:s.e,unchecked:s.h,checked:s.n},dark:{disabled:s.h,unchecked:s.e,checked:s.t}};n.d(t,"a",(function(){return p}));const c=i.a.label`
+  display: flex;
+  position: relative;
+
+  cursor: ${e=>e.disabled?"initial":"pointer"};
+`,u=i.a.span``,d=i.a.input`
+  opacity: 0;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+
+  & + span {
+    .path {
+      fill: ${e=>e.checkboxTheme.unchecked};
+    }
+
+    .checked .path {
+      fill: ${e=>e.checkboxTheme.checked};
+    }
+    .unchecked {
+      display: block;
+    }
+
+    .checked {
+      display: none;
+    }
+
+    .indeterminate {
+      display: none;
+    }
+  }
+
+  &:checked + span {
+    .unchecked {
+      display: none;
+    }
+
+    .checked {
+      display: block;
+    }
+
+    .indeterminate {
+      display: none;
+    }
+  }
+
+  &:indeterminate + span {
+    .unchecked {
+      display: none;
+    }
+
+    .checked {
+      display: none;
+    }
+
+    .indeterminate {
+      display: block;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled + span {
+    .path {
+      fill: ${e=>e.checkboxTheme.disabled};
+    }
+  }
+`,m=i()(o.s)`
+  margin-left: 8px;
+`,p=e=>{const{onChange:t,onClick:n,checked:i,children:o,className:s,disabled:p,indeterminate:g,label:h,title:E,value:f,name:y}=e,v=r.useContext(a.ThemeContext),S=l[v.name],w=r.useRef(null);return r.useEffect(()=>{const e=w.current;e&&(e.indeterminate=g||!1)},[g]),r.createElement(c,{disabled:!!p},r.createElement(u,null,r.createElement(d,{id:"kaggleCheckbox",type:"checkbox",checked:i,className:s,disabled:p,onChange:t,onClick:n,value:f||"true",title:E,name:y,checkboxTheme:S,tabIndex:0,ref:w}),r.createElement("span",null,r.createElement("svg",{className:"checked",width:"18",height:"18",viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg"},r.createElement("path",{className:"path",fillRule:"evenodd",clipRule:"evenodd",d:"M2 0H16C17.1 0 18 0.9 18 2V16C18 17.1 17.1 18 16 18H2C0.9 18 0 17.1 0 16V2C0 0.9 0.9 0 2 0ZM13.6 4.6L15 6L7 14L3 10L4.4 8.6L7 11.2L13.6 4.6Z",fill:"#202124"})),r.createElement("svg",{className:"unchecked",width:"18",height:"18",viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg"},r.createElement("path",{className:"path",fillRule:"evenodd",clipRule:"evenodd",d:"M2 0H16C17.1 0 18 0.9 18 2V16C18 17.1 17.1 18 16 18H2C0.9 18 0 17.1 0 16V2C0 0.9 0.9 0 2 0ZM16 16V2H2V16H16Z",fill:"#80868B"})),r.createElement("svg",{className:"indeterminate",width:"18",height:"18",viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg"},r.createElement("path",{className:"path",fillRule:"evenodd",clipRule:"evenodd",d:"M16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM16 2V16H2V2H16ZM4 10H14V8H4V10Z",fill:"#80868B"})))),r.createElement(m,null,h||o))}},1397:function(e,t,n){"use strict";n.d(t,"a",(function(){return l}));var a=n(3),i=n(5);const r=i.c.Sdk.Users.Protos.HatsLocation,o=i.c.Sdk.Users.Protos.SurveyType,s={"/":r.HOMEPAGE,"/competitions":r.COMPETITIONS,"/datasets":r.DATASETS,"/notebooks":r.NOTEBOOKS,"/code":r.NOTEBOOKS,"/discussion":r.DISCUSSIONS,"/learn":r.COURSES};class l{getHatsLocation(){return s[window.location.pathname]||r.UNSPECIFIED}saveDismissInfo(e,t){return Object(a.__awaiter)(this,void 0,void 0,(function*(){this.getHatsLocation()!==r.UNSPECIFIED&&t!==o.UNSPECIFIED&&(t===o.HATS?yield i.A.hatsService.dismissHats({location:this.getHatsLocation(),userClickedLink:e}):yield i.A.hatsService.dismissSurvey({location:this.getHatsLocation(),userClickedSurvey:e,surveyType:t}))}))}getHatsStatusResponse(){return Object(a.__awaiter)(this,void 0,void 0,(function*(){if(this.getHatsLocation()===r.UNSPECIFIED)return{surveyType:o.UNSPECIFIED};const e=yield i.A.hatsService.getUserHatsStatus({location:this.getHatsLocation()});return e.surveyType=function(e){switch(e){case"hats":return o.HATS;case"dataScienceAndMachineLearningSurvey2020":return o.DATA_SCIENCE_AND_MACHINE_LEARNING_SURVEY_2020}return o.UNSPECIFIED}(e.surveyType),e}))}recordAcceptSurvey(e){return this.saveDismissInfo(!0,e)}recordCancelSurvey(e){return this.saveDismissInfo(!1,e)}getSurveyUrl(e){switch(e){case o.DATA_SCIENCE_AND_MACHINE_LEARNING_SURVEY_2020:return"https://google.qualtrics.com/jfe/form/SV_8vuiBypoM1Xuixf";case o.HATS:default:return"https://google.qualtrics.com/jfe/form/SV_bHF40rH3PQDEJpP"}}}},2237:function(e,t,n){"use strict";var a=n(1),i=n.n(a),r=n(0),o=n(96),s=n(86),l=n(2);const c={light:{background:l.t},dark:{background:l.j}};n.d(t,"a",(function(){return h}));const u=i.a.div`
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: ${e=>e.theme.material.elevation[2]};
+  max-width: 438px;
+  position: ${e=>e.inline?"relative":"fixed"};
+  bottom: 64px;
+  right: 64px;
+  background-color: ${e=>e.nudgeTheme.background};
+  display: flex;
+  align-items: center;
+  z-index: 10;
+`,d=i()(o.a)`
+  height: 144px;
+  width: 108px;
+  object-fit: cover;
+  margin-right: 16px;
+`,m=i()(s.p)`
+  margin-bottom: 8px;
+`,p=i()(s.c)`
+  margin-bottom: 16px;
+`,g=i.a.div`
+  display: flex;
+  justify-content: flex-end;
+
+  div {
+    margin-left: 8px;
+  }
+`,h=e=>{const{title:t,description:n,inline:i,actions:o,graphic:s}=e,l=r.useContext(a.ThemeContext);return r.createElement(u,{inline:i,nudgeTheme:c[l.name]},r.createElement(d,{graphic:s}),r.createElement("div",null,r.createElement(m,null,t),r.createElement(p,{emphasis:"low"},n),r.createElement(g,null,o)))}},798:function(e,t,n){"use strict";n.r(t);var a=n(3),i=n(1023),r=n(211),o=n(5),s=n(0),l=n(713),c=n(204),u=n(1),d=n.n(u);const m="@media (max-width: 450px)",p=o.c.Sdk.Users.Protos.SurveyType,g=d.a.div`
+  background: ${e=>e.theme.material.color.white};
+  bottom: ${e=>e.theme.material.spacing(5)};
+  box-shadow: ${e=>e.theme.material.elevation[4]};
+  border-radius: ${e=>e.theme.material.borderRadius.normal};
+  display: flex;
+  flex-direction: column;
+  padding: ${e=>e.theme.material.spacing(6)};
+  position: fixed;
+  right: ${e=>e.theme.material.spacing(5)};
+  width: ${e=>e.theme.material.spacing(70)};
+  z-index: ${e=>e.theme.zindex[1e3]};
+
+  ${m} {
+    flex-direction: row;
+    justify-content: space-between;
+    left: ${e=>e.theme.material.spacing(5)};
+    padding: ${e=>{const t=e.theme.material.spacing;return`${t(2)} 0 ${t(2)} ${t(4)}`}};
+    width: auto;
+  }
+
+  /* At extremely small breakpoints, padding is removed to further condense */
+  @media (max-width: 350px) {
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+`,h=d.a.div`
+  align-items: center;
+  display: flex;
+  font-weight: 500;
+  margin-bottom: ${e=>e.theme.material.spacing(5)};
+
+  ${m} {
+    margin-bottom: 0;
+  }
+`,E=d.a.span`
+  white-space: nowrap;
+
+  ${m} {
+    display: none;
+  }
+`,f=d.a.span`
+  display: none;
+  white-space: nowrap;
+
+  ${m} {
+    display: inline;
+  }
+`,y=d.a.div`
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+`,v=d()(l.a)`
+  margin-right: ${e=>e.theme.material.spacing(4)};
+  white-space: nowrap;
+
+  ${m} {
+    display: none;
+  }
+`,S=d()(c.a)`
+  &&& {
+    display: none;
+
+    ${m} {
+      display: flex;
+    }
+  }
+`,w=d.a.a`
+  text-decoration: none;
+  color: inherit;
+`;function b(e){const{surveyType:t,hatsService:n,onAccept:a,onDismiss:i}=e;return t===p.UNSPECIFIED?null:s.createElement(g,null,t===p.DATA_SCIENCE_AND_MACHINE_LEARNING_SURVEY_2020?s.createElement(h,null,"Take the 2020 Kaggle Machine Learning and Data Science Survey and prepare for the upcoming analytics challenge!"):s.createElement(h,null,s.createElement(E,null,"Help us improve Kaggle"),s.createElement(f,null,"Help us improve")),s.createElement(y,null,s.createElement(v,{emphasis:"low",onClick:()=>{n.recordCancelSurvey(t),null==i||i()}},"No thanks"),s.createElement(l.a,{onClick:()=>{n.recordAcceptSurvey(t),null==a||a()}},s.createElement(w,{href:n.getSurveyUrl(t),target:"_blank"},s.createElement(E,null,"Take our Survey"),s.createElement(f,null,"Take Survey"))),s.createElement(S,{icon:"close",onClick:()=>{n.recordCancelSurvey(t),null==i||i()}})))}var T=n(1397),N=n(804);const x=o.c.Sdk.Users.Protos.NudgePage,C=o.c.Sdk.Users.Protos.NudgeReactions,k=o.c.Sdk.Users.Protos.NudgeType,A=o.c.Sdk.Users.Protos.SurveyType,_=new N.a,I=N.b.NUDGE_KEY_COMMUNITY_ALL,D=Object(N.d)(),O=N.b.NUDGE_KEY_COMMUNITY_ALL_SEEN,L=()=>(new Date).getTime(),U=e=>t=>Object.values(e).includes(t),R=U(k),P=U(x),H=e=>{const t=JSON.parse(e);if("number"!=typeof t.timestamp)throw new Error("invalid timestamp");if(!Array.isArray(t.nudges))throw new Error("invalid array");const n=t.nudges.map(e=>{if((e=>"object"==typeof e&&R(e.type)&&P(e.page)&&"number"==typeof e.priority)(e))return e;throw new Error("invalid nudge")});return{timestamp:t.timestamp,nudges:n}},$=()=>{const e=_.read(I);if(null===e)return null;try{const{nudges:t,timestamp:n}=H(e);return L()-n>36e5?null:t}catch(e){return null}},M=e=>{const t=(e=>JSON.stringify({nudges:e.map(e=>({type:e.type,page:e.page,priority:e.priority})),timestamp:L()}))(e);_.write(I,t)},j=()=>{return"1"===_.read(O)};var K=n(2),V=n(1364),F=n(2237),Y=n(1107),G=n(1279);const B=d()(Y.a)`
+  flex-shrink: 0;
+  margin-right: 16px;
+`,Z=d.a.div`
+  margin-top: 8px;
+  && label {
+    justify-content: flex-start;
+  }
+
+  && label span {
+    color: ${K.i};
+    font-size: 12px;
+  }
+`,z=e=>{const{fileName:t,alt:n}=e;return s.createElement(B,{src:`/static/images/community/nudges/${t}`,alt:n,width:"108",height:"144"})},W=e=>{const{actText:t,actHref:n,dismissText:a="Dismiss",onAccept:i,onDismiss:r}=e;return s.createElement(s.Fragment,null,s.createElement(l.a,{onClick:r,emphasis:"low"},a),s.createElement(l.a,{onClick:i,href:n,style:{marginLeft:"8px"}},t))},J=e=>{const{text:t,optOutText:n,isOptedOut:a,onToggleOptedOut:i}=e;return s.createElement(s.Fragment,null,s.createElement("p",null,t),s.createElement(Z,null,s.createElement(V.a,{checked:a,onChange:i},n)))},q=e=>{const{nudge:t}=e,[n,i]=s.useState(null),[r,l]=s.useState(!1);s.useEffect(()=>{(()=>Object(a.__awaiter)(void 0,void 0,void 0,(function*(){var n;if(void 0!==t){const{userNudgeId:a}=yield o.A.nudgeService.showingNudge({type:t});0===a?null===(n=e.onDismiss)||void 0===n||n.call(e):i(a)}})))()},[t]);const c=s.useCallback(()=>{var a;void 0!==t&&null!==n&&(o.A.nudgeService.reactToNudge({nudgeId:n,reaction:C.ACCEPTED,dontShowAgain:r}),o.r.report("general","nudge-followed",{nudgeId:n,nudgeType:t,isOptedOut:r})),null===(a=e.onAccept)||void 0===a||a.call(e)},[e.onAccept,n,r]),u=s.useCallback(()=>{var a;void 0!==t&&null!==n&&(o.A.nudgeService.reactToNudge({nudgeId:n,reaction:C.USER_DISMISSED,dontShowAgain:r}),o.r.report("general","nudge-dismissed",{nudgeId:n,nudgeType:t,isOptedOut:r})),null===(a=e.onDismiss)||void 0===a||a.call(e)},[e.onDismiss,n,r]),d=s.useCallback(()=>{G.a.trigger({type:G.b.EDIT_PROFILE}),c()},[c]),m=s.useCallback(()=>{l(!r)},[r]);if(s.useEffect(()=>{null!==n&&o.r.report("general","nudge-shown",{nudgeId:n,nudgeType:t})},[n,t]),null===n)return null;const p="Don't show me newsletter sign-ups again.",g="Don't ask me to update my profile again.",h=(e,t)=>s.createElement(J,{text:e,optOutText:t,isOptedOut:r,onToggleOptedOut:m});switch(t){case k.INTRODUCE_YOURSELF:return s.createElement(F.a,{title:"Introduce yourself!",description:h("Help the community learn more about you. \n              It will only take a minute or two to complete your Kaggle profile.",g),graphic:s.createElement(z,{fileName:"employer_nudge_complete.png",alt:"Introduce yourself!"}),actions:s.createElement(W,{actText:"Edit Profile",onAccept:d,onDismiss:u})});case k.PROMOTED:return s.createElement(F.a,{title:"Look good in rankings",description:h("You've reached an impressive level,\n          but your details are incomplete. \n          Take two minutes to optimize your profile.",g),graphic:s.createElement(z,{fileName:"employer_nudge_update.png",alt:"Look good in rankings"}),actions:s.createElement(W,{actText:"Edit Profile",onAccept:d,onDismiss:u})});case k.STILL_WORK_AT:return s.createElement(F.a,{title:"Dust off your profile",description:h("You've been on Kaggle over two years!\n          Take a minute or two to make sure your profile is updated.",g),graphic:s.createElement(z,{fileName:"employer_nudge_update.png",alt:"Dust off your profile"}),actions:s.createElement(W,{actText:"Edit Profile",onAccept:d,onDismiss:u})});case k.GETTING_NOTICED:return s.createElement(F.a,{title:"You’re getting noticed!",description:h("The community has discovered your profile.\n          Complete your Kaggle profile to tell them about yourself.",g),graphic:s.createElement(z,{fileName:"employer_nudge_complete.png",alt:"You’re getting noticed!"}),actions:s.createElement(W,{actText:"Edit Profile",onAccept:d,onDismiss:u})});case k.COMPETITION_EMAIL:return s.createElement(F.a,{title:"Stay up to date with Kaggle Competitions",description:h("Subscribe to our email list to hear about new\n          competitions and learn from Kaggle grandmaster workshops\n          and tutorials.",p),graphic:s.createElement(z,{fileName:"email_nudge.png",alt:"Stay up to date with Kaggle Competitions"}),actions:s.createElement(W,{actText:"Sign Up",onAccept:c,onDismiss:u})});case k.BRAND_NEW:return s.createElement(F.a,{title:"Don't miss a new competition or ML Course",description:h("Subscribe to our email list to hear about\n          new ML competitions and courses from Kaggle.",p),graphic:s.createElement(z,{fileName:"email_nudge.png",alt:"Don't miss a new competition or ML Course"}),actions:s.createElement(W,{actText:"Sign Up",onAccept:c,onDismiss:u})});case k.DATASET_GRAB_AND_GO:return s.createElement(F.a,{title:"Discover more datasets",description:h("Sign up for our mailing list to learn about\n          trending datasets, Kaggle news, and updates",p),graphic:s.createElement(z,{fileName:"email_nudge.png",alt:"Discover more datasets"}),actions:s.createElement(W,{actText:"Sign Up",onAccept:c,onDismiss:u})});case k.NEWLY_RETURNED:return s.createElement(F.a,{title:"Stay up to date with ML",description:h("Sign up for our mailing list to learn about\n          newly released ML courses, Kaggle news, and updates.",p),graphic:s.createElement(z,{fileName:"email_nudge.png",alt:"Stay up to date with ML"}),actions:s.createElement(W,{actText:"Sign Up",onAccept:c,onDismiss:u})});default:return null}};n.d(t,"hatsService",(function(){return X})),n.d(t,"CommunityNudges",(function(){return te}));const Q=new Set(["/competitions","/datasets","/code","/discussion","/learn",""]),X=new T.a,ee=(e,t,n)=>{var a;let r=(t=((e,t)=>t.filter(t=>{let n=window.location.pathname;switch(n=n.replace(/\/$/,""),t.page){case x.ANY:return!0;case x.COMPETITIONS:return"CompetitionsApp"===e||"CompetitionContainer"===e;case x.PROFILE:return"ProfileContainerReact"===e&&n===Object(i.a)().profileUrl;case x.LANDING:return Q.has(n);default:return!1}}))(e,t)).map(e=>[e.priority,{type:"nudge",message:e.type}]);return n!==A.UNSPECIFIED&&r.push([5,{type:"hats",message:n}]),r.sort((e,t)=>t[0]-e[0]),r.length>0&&"nudge"===(null===(a=r[0][1])||void 0===a?void 0:a.type)&&o.r.report("general","nudge-would-show",{nudgeType:r[0][1].message}),r=r.filter(([e,t])=>"nudge"!==t.type||(e=>{switch(e){case k.INTRODUCE_YOURSELF:case k.GETTING_NOTICED:case k.PROMOTED:case k.STILL_WORK_AT:return o.n.employerNudges;case k.COMPETITION_EMAIL:case k.BRAND_NEW:case k.DATASET_GRAB_AND_GO:case k.NEWLY_RETURNED:return o.n.emailNudges;default:return!1}})(t.message)),0===r.length?null:r[0][1]},te=e=>{const[t,n]=s.useState(Object(r.a)().pageType),[l,c]=s.useState(null),[u,d]=s.useState($),[m,p]=s.useState(null),[g,h]=s.useState(j);s.useEffect(()=>{const e=null!==Object(i.b)();e&&null===u&&!g?(()=>Object(a.__awaiter)(void 0,void 0,void 0,(function*(){const e=(yield o.A.nudgeService.checkForNudge({})).potentialNudges;if(null!==e){try{M(e)}catch(e){}d(e)}})))():e||null!==u||d([])},[u,g]),s.useEffect(()=>{g||(()=>Object(a.__awaiter)(void 0,void 0,void 0,(function*(){const e=yield X.getHatsStatusResponse();p(e.surveyType)})))()},[g]),s.useEffect(()=>{return Object(r.c)(e=>{n(e.pageType)})},[]),s.useEffect(()=>{if(null!==t&&null!==u&&null!==m){const e=ee(t,u,m);if(null!==e)try{_.write(O,"1")}catch(e){d([])}c(e)}},[t,u,m]);const E=s.useCallback(()=>{h(!0)},[]);return g||null===l?null:"nudge"===l.type&&D?s.createElement(q,{nudge:l.message,onAccept:E,onDismiss:E}):"hats"===l.type?s.createElement(b,{surveyType:l.message,hatsService:X,onAccept:E,onDismiss:E}):null}}}]);
